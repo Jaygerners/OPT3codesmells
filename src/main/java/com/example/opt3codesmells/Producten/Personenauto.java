@@ -2,6 +2,12 @@ package com.example.opt3codesmells.Producten;
 
 public class Personenauto extends Product {
     private int gewicht;
+
+    @Override
+    public boolean isVoorraad() {
+        return false;
+    }
+
     private int motorinhoud;
 
     public Personenauto(String merk, int gewicht, int motorinhoud) {

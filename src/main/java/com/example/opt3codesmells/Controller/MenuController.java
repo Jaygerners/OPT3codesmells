@@ -1,14 +1,20 @@
-package com.example.opt3codesmells;
-
+package com.example.opt3codesmells.Controller;
+import com.example.opt3codesmells.Controller.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+
+import java.io.IOException;
+
+import static com.example.opt3codesmells.Controller.Controller.openScene;
 
 public class MenuController {
 
     @FXML
-    private void openOverzicht(ActionEvent event) {
+    private void openOverzicht(ActionEvent event) throws IOException {
         // Code om het overzichtvenster te openen
-        System.out.println("Overzichtvenster.fxml geopend");
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        openScene("Overzichtvenster.fxml");
     }
 
     @FXML

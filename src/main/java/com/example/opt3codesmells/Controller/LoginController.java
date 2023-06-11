@@ -1,5 +1,6 @@
-package com.example.opt3codesmells;
+package com.example.opt3codesmells.Controller;
 
+import com.example.opt3codesmells.MenuVenster;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -9,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.opt3codesmells.Controller.Controller.openScene;
 import static com.example.opt3codesmells.MenuVenster.*;
 
 public class LoginController {

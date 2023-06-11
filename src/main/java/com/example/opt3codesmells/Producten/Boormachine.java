@@ -17,4 +17,9 @@ public class Boormachine extends Product {
     protected double berekenVerzekeringskosten() {
         return 1;
     }
+
+    @Override
+    public boolean isVoorraad() {
+        return false;
+    }
 }

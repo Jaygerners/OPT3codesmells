@@ -36,13 +36,6 @@ public class MenuVenster implements Subject {
             observer.update(aantalGeopendeVensters);
         }
     }
-    public static void openScene(String FXML) throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(FXML+".fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 }
 

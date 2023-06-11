@@ -1,4 +1,5 @@
-package com.example.opt3codesmells;
+package com.example.opt3codesmells.Controller;
+
 import com.example.opt3codesmells.Factory.BoormachineFactory;
 import com.example.opt3codesmells.Factory.PersonenautoFactory;
 import com.example.opt3codesmells.Factory.ProductFactory;
@@ -8,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,13 +26,17 @@ public class OverzichtController implements Initializable {
         ProductFactory vrachtautoFactory = new VrachtautoFactory("Scania", 5000, 8000);
         ProductFactory boormachineFactory = new BoormachineFactory("Bosch", "Boor123");
 
+        Product auto1 = autoFactory.createProduct();
+        Product vrachtauto1 = vrachtautoFactory.createProduct();
+        Product boormachine1 = boormachineFactory.createProduct();
+
         // Producten toevoegen aan de productList VBox
-        productList.getChildren().addAll(createProductLabel(product1), createProductLabel(product2), createProductLabel(product3));
+        productList.getChildren().addAll(createProductLabel(auto1), createProductLabel(vrachtauto1), createProductLabel(boormachine1));
     }
 
     // Methode om een Label voor een product te maken
     private Label createProductLabel(Product product) {
-        Label label = new Label(product.getNaam());
+        Label label = new Label(product.getMerk());
         if (product.isVoorraad()) {
             label.setStyle("-fx-text-fill: green;");
         } else {
@@ -45,6 +49,6 @@ public class OverzichtController implements Initializable {
     // Methode om het detailvenster te openen voor een specifiek product
     private void openDetailVenster(Product product) {
         // Implementeer hier de logica om het detailvenster te openen voor het geselecteerde product
-        System.out.println("Detailvenster openen voor product: " + product.getNaam());
+        System.out.println("Detailvenster openen voor product: " + product.getMerk());
     }
 }

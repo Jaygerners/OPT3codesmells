@@ -23,5 +23,7 @@ public abstract class Product {
     // Abstracte methoden die door de subklassen geïmplementeerd moeten worden
     protected abstract double basisHuurprijs();
     protected abstract double berekenVerzekeringskosten();
+
+    public abstract boolean isVoorraad();
 }
 

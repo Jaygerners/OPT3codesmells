@@ -6,4 +6,6 @@ module com.example.opt3codesmells {
             
     opens com.example.opt3codesmells to javafx.fxml;
     exports com.example.opt3codesmells;
+    exports com.example.opt3codesmells.Controller;
+    opens com.example.opt3codesmells.Controller to javafx.fxml;
 }

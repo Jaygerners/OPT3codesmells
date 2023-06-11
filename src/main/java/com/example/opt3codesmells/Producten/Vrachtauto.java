@@ -4,6 +4,11 @@ public class Vrachtauto extends Product {
     private int laadvermogen;
     private int motorinhoud;
 
+    @Override
+    public boolean isVoorraad() {
+        return false;
+    }
+
     public Vrachtauto(String merk, int laadvermogen, int motorinhoud) {
         super(merk);
         this.laadvermogen = laadvermogen;
