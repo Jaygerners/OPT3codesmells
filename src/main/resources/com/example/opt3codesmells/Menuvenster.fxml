@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.opt3codesmells.MenuController">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Menu">
+                    <items>
+                        <MenuItem text="Overzicht" onAction="#openOverzicht" />
+                        <MenuItem text="Beheer" onAction="#openBeheer" />
+                        <MenuItem text="Uitloggen" onAction="#uitloggen" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
